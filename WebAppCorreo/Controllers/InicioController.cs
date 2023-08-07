@@ -72,7 +72,7 @@ namespace WebAppCorreo.Controllers
 
                 if (respuesta)
                 {
-                    string path = HttpContext.Server.MapPath("~/Plantilla/Confirmar.html");
+                    string path = HttpContext.Server.MapPath("~/Plantillas/Confirmar.html");
                     string content = System.IO.File.ReadAllText(path);
                     string url = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Headers["host"], "/Inicio/Confirmar?token=" + usuario.Token);
 
@@ -127,7 +127,7 @@ namespace WebAppCorreo.Controllers
 
                 if (respuesta)
                 {
-                    string path = HttpContext.Server.MapPath("~/Plantilla/Restablecer.html");
+                    string path = HttpContext.Server.MapPath("~/Plantillas/Restablecer.html");
                     string content = System.IO.File.ReadAllText(path);
                     string url = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Headers["host"], "/Inicio/Actualizar?token=" + usuario.Token);
 
